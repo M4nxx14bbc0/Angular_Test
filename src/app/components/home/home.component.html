@@ -1,0 +1,9 @@
+<h1>{{getTitle()}}</h1>
+
+<div (click)="setGender()">
+  Sesso: {{gender=='F'?"Donna":"Uomo"}}
+</div>
+
+<div>
+  <input type="text" [(ngModel)]="title">
+</div>

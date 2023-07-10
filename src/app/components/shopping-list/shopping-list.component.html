@@ -1,0 +1,11 @@
+<div>
+  <button (click)="openCard = !openCard">Buu buu</button>
+  <p *ngIf="!openCard">Settede!!</p>
+</div>
+<div *ngIf="!openCard">
+  <ul>
+    <li *ngFor="let el of list">
+      {{el}}
+    </li>
+  </ul>
+</div>
