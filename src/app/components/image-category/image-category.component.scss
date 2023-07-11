@@ -1,0 +1,20 @@
+:host > div {
+  display: flex;
+  background-color: gray;
+  border-radius: 10px;
+  align-items: center;
+  div:nth-child(2){
+    flex-basis: 60%;
+    flex-grow: 1;
+  }
+}
+[ttdfds] > div {
+  display: flex;
+  background-color: gray;
+  border-radius: 10px;
+  align-items: center;
+}
+[ttdfds] > div div:nth-child(2) {
+  flex-basis: 60%;
+  flex-grow: 1;
+}

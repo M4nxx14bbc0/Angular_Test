@@ -1,0 +1,13 @@
+<div class="row" *ngIf="weather">
+  <div class="col-sm-4">
+    <img [src]="weather.current.weather_icons[0]" alt="">
+  </div>
+  <div class="col-sm-4">
+    {{weather.current.temperature}}
+  </div>
+  <div class="col-sm-4">
+    <div>Vento: {{weather.current.wind_speed}}</div>
+    <div>Precipitazione: {{weather.current.precip}}</div>
+    <div>Umidit&agrave;: {{weather.current.humidity}}</div>
+  </div>
+</div>

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ImageCategoryComponent {
 
-  categories: any[] = [
+  categories: { category: string, label: string }[] = [
     {
       category: 'abstract',
       label: 'astratti'
@@ -16,7 +16,7 @@ export class ImageCategoryComponent {
       label: 'animali'
     },{
       category: 'business',
-      label: 'economia'
+      label: 'impresa'
     },{
       category: 'cats',
       label: 'gatti'
@@ -31,7 +31,7 @@ export class ImageCategoryComponent {
   selectedCategory: string = this.categories[0].category;
   url: string = "https://loremflickr.com/320/240";
 
-  setUrl(cat: any): void{
+  setUrl(cat: { category: string, label: string }): void{
     this.selectedCategory = cat.category;
   }
 

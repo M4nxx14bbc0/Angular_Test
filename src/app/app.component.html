@@ -1,10 +1,13 @@
-<app-nav [userLogged]="userLogged"></app-nav>
+<app-nav (sel)="setSelectedView($event)"
+         [voices]="voicesMenu"
+         [userLogged]="userLogged"></app-nav>
 
-<app-home></app-home>
+<div [ngSwitch]="selectedView">
+  <app-home *ngSwitchCase="'home'"></app-home>
+  <app-shopping-list *ngSwitchCase="'shopping'"></app-shopping-list>
+  <app-image-category *ngSwitchCase="'category'"></app-image-category>
 
-<app-shopping-list></app-shopping-list>
-
-<app-image-category></app-image-category>
+</div>
 <!--
 <div class="btn btn-primary">Salva</div>-->
 
